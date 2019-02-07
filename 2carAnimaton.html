@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            overflow: hidden;
+        }
+        div#main{
+            position: relative;
+            height: fit-content;
+            
+        }
+        img{
+            position: relative;
+            display: inline-block;
+        }
+        #r{
+            width: 100%;
+            top: 5%;
+            left: 0%;
+            z-index: 1;
+        }
+
+        div#car{
+            display: inline-block;
+            position: absolute;
+            width: 25vw;
+            top: 15%;
+            left: -25%;
+            animation: car 6s linear 0s infinite forwards normal;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+
+        }
+        
+        #c{
+            width: 25vw;
+            z-index: 2;
+        }
+        .w{
+            width: 3vw;
+            z-index: 3;
+            position: absolute;
+            animation: wheel 2s linear 0s infinite forwards normal;
+        }
+        #w1{
+            left: 17.2%;
+            top: 54%;
+        }
+        #w2{
+            left: 73.4%;
+            top: 55.3%;
+        }
+        
+        
+        @keyframes car{
+            form{
+                left: -25%;
+            }
+            to{
+                left: 110%;
+            }
+        }
+        @keyframes wheel{
+            form{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg)
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+            <img id="r" src="animation  assets/myroad.jpg" alt="">
+            <div id="car">
+                    <img id="c" src="animation  assets/my-car.png" alt="">
+                    <img class="w" id="w1" src="animation  assets/wheel.png" alt="">
+                    <img class="w" id="w2" src="animation  assets/wheel.png" alt="">
+            </div>
+    </div>
+    
+</body>
+</html>

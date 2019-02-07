@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            overflow: hidden;
+        }
+        div#main{
+            position: relative;
+            height: fit-content;
+            
+        }
+        img{
+            position: absolute;
+            display: inline-block;
+        }
+        #r{
+            width: 100%;
+            top: 5%;
+            left: 0%;
+            z-index: 1;
+            position: relative;
+        }
+        #c{
+            width: 25%;
+            top: 10%;
+            left: 0%;
+            z-index: 2;
+            animation: car 6s linear 0s infinite forwards normal;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+        }
+        .w{
+            width: 3%;
+            z-index: 3;
+        }
+        #w1{
+            left: 4.2%;
+            top: 34%;
+            animation: t1 6s linear 0s infinite forwards normal;
+        }
+        #w2{
+            left: 18.4%;
+            top: 33.3%;
+            animation: t2 6s linear 0s infinite forwards normal;
+        }
+        
+        
+        @keyframes car{
+            form{
+                left: -10%;
+            }
+            to{
+                left: 50%;
+            }
+        }
+        @keyframes t1{
+            form{
+                left: -14.2%;
+                transform: rotate(0deg);
+            }
+            to{
+                left: 54.2%;
+                transform: rotate(360deg)
+            }
+        }
+        @keyframes t2{
+            form{
+                left: 118.4%;
+                transform: rotate(0deg);
+            }
+            to{
+                left: 68.4%;
+                transform: rotate(360deg)
+                
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+            <img id="r" src="animation  assets/myroad.jpg" alt="">
+            <img id="c" src="animation  assets/my-car.png" alt="">
+            <img class="w" id="w1" src="animation  assets/wheel.png" alt="">
+            <img class="w" id="w2" src="animation  assets/wheel.png" alt="">
+    </div>
+    
+</body>
+</html>
